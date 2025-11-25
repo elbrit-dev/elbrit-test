@@ -24,4 +24,32 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// PLASMIC.registerComponent(...);
+import Button from "./Button";
+
+PLASMIC.registerComponent(Button, {
+  name: "Button",
+  props: {
+    children: {
+      type: "slot",
+      defaultValue: "Button",
+    },
+    variant: {
+      type: "choice",
+      options: ["primary", "secondary", "outline"],
+      defaultValue: "primary",
+    },
+    size: {
+      type: "choice",
+      options: ["small", "medium", "large"],
+      defaultValue: "medium",
+    },
+    disabled: {
+      type: "boolean",
+      defaultValue: false,
+    },
+    onClick: {
+      type: "eventHandler",
+      argTypes: [],
+    },
+  },
+});
