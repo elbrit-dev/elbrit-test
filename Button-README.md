@@ -57,7 +57,7 @@ import Button from './Button';
 
 ## Customization
 
-You can customize the button styles by editing `Button.css`. The component uses CSS classes that follow the BEM-like naming convention:
+You can customize the button styles by editing `Button.module.css`. The component uses CSS Modules with classes that follow the BEM-like naming convention:
 
 - `.btn` - Base button styles
 - `.btn-{variant}` - Variant styles (primary, secondary, outline)
@@ -66,5 +66,5 @@ You can customize the button styles by editing `Button.css`. The component uses 
 ## Files
 
 - `Button.jsx` - React component
-- `Button.css` - Component styles
+- `Button.module.css` - Component styles (CSS Modules)
 - `Button-README.md` - This documentation file

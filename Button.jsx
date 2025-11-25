@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.css';
+import styles from './Button.module.css';
 
 /**
  * Basic Button Component for Plasmic Studio
@@ -12,26 +12,26 @@ import './Button.css';
  * @param {string} props.className - Additional CSS classes
  */
 function Button({
-  children = 'Button',
-  variant = 'primary',
-  size = 'medium',
-  disabled = false,
-  onClick,
-  className = '',
-  ...rest
+    children = 'Button',
+    variant = 'primary',
+    size = 'medium',
+    disabled = false,
+    onClick,
+    className = '',
+    ...rest
 }) {
-  const buttonClass = `btn btn-${variant} btn-${size} ${className}`.trim();
+    const buttonClass = `${styles.btn} ${styles[`btn-${variant}`]} ${styles[`btn-${size}`]} ${className}`.trim();
 
-  return (
-    <button
-      className={buttonClass}
-      disabled={disabled}
-      onClick={onClick}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
+    return (
+        <button
+            className={buttonClass}
+            disabled={disabled}
+            onClick={onClick}
+            {...rest}
+        >
+            {children}
+        </button>
+    );
 }
 
 export default Button;
