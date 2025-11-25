@@ -5,6 +5,7 @@ export const PLASMIC = initPlasmicLoader({
     {
       id: "w5mZHNDpd2EToAK4Xve3Hy",
       token: "fq5N60BNHKggcBWXiKKNNC0kWgmIY04OauM3gfAldeeWFpQ2IXbLCuh7tg01uUqGPBHe8Fr4UCF8wQkH2GGQ",
+      version: process.env.PLASMIC_VERSION_TAG,
     },
   ],
 
